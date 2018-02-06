@@ -19,7 +19,12 @@ Examples:
 
 Typically, the first letter in a `common noun` isn't capitalized unless that common noun is the first word in a sentence.
 
-Verb
+## Verb
+
+The `verb` signals an action, an occurrence, or a state of being. Whether mental, physical, or mechanical, verbs always express activity.
+
+Examples: Go, run, make, do, strike, travel, exist
+
 Fricative
 Subject
 Object
