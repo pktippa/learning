@@ -38,7 +38,7 @@ Types of Subjects
 
 A subject may be one word or several words.
 
-The subject may be just a single word: a `noun` or a `pronoun`. In this first example, the proper noun Felix is the subject of the sentence:
+The subject may be just a single word: a `noun` or a `pronoun`. In this first example, the proper noun `Felix` is the subject of the sentence:
 
 > `Felix` laughed.
 
