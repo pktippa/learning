@@ -36,6 +36,10 @@ The `render`(above) method returns a description of what you want to render, and
 
 React element is a real JavaScript object that you can store in a variable or pass around your program.
 
+JSX produces "React Elements"
+
+You can think of them as descriptions of what you want to see on the screen.
+
 # State
 
 React components can have `state` by setting `this.state` in the constructor, which should be considered private to the component
