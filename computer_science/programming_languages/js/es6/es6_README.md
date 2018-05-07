@@ -31,3 +31,13 @@ console.log(obj1);
 console.log(newObj);
 // expected output: {fname: 'pradeep', lname: 'tippa'}
 ```
+
+## Shorthand object notation
+
+```js
+var a = 'foo', b = 42, c = {};
+var o = {a, b, c};
+
+console.log(o);
+// output {a:'foo', b: 42, c: {}}
+````
