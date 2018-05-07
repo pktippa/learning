@@ -11,6 +11,8 @@ $ npm install -g create-react-app
 
 A component takes in parameters, called `props`, and returns a hierarchy of views to display via the `render` method.
 
+components may accept arbitrary props, including primitive values, React elements, or functions.
+
 ```js
 class ShoppingList extends React.Component {
   render() {
@@ -30,6 +32,12 @@ class ShoppingList extends React.Component {
 // Example usage: <ShoppingList name="Mark" />
 ```
 
+React component accepts inputs via `props` by using the attributes and returns the React Elements describing what should appear on the screen.
+
+## React DOM
+
+React DOM compares the element and its children to the previous one, and only applies the DOM updates necessary to bring the DOM to the desired state.
+
 ## React Element
 
 The `render`(above) method returns a description of what you want to render, and then `React` takes that description and renders it to the screen. In particular, `render` returns a `React element`, which is a lightweight description of what to render.
@@ -40,6 +48,8 @@ JSX produces "React Elements"
 
 You can think of them as descriptions of what you want to see on the screen.
 
+Reacct Elements are "immutable"
+
 # State
 
 React components can have `state` by setting `this.state` in the constructor, which should be considered private to the component
@@ -47,6 +57,14 @@ React components can have `state` by setting `this.state` in the constructor, wh
 When you want to aggregate data from multiple children or to have two child components communicate with each other, move the state upwards so that it lives in the parent component. The parent can then pass the state back down to the children via props, so that the child components are always in sync with each other and with the parent.
 
 Component `state` is private we cannot update the Parent component `state` directly from the child component, the usual pattern is pass down a function from Parent to Child component that gets called to invoke it on action of child component. We call components like this controlled components.
+
+Don't use state at all to build this static version
+
+Is it passed in from a parent via props? If so, it probably isn’t state.
+
+Does it remain unchanged over time? If so, it probably isn’t state.
+
+Can you compute it based on any other state or props in your component? If so, it isn’t state.
 
 # Constructor
 
@@ -131,5 +149,65 @@ render() {
     console.log('Render method called')
     <button onClick={() => this.handleClick()}>this calls render</button>
     <button onClick={() => this.handleAnother()}>this does not call render</button>
+}
+```
+
+# Composition vs Inheritance
+
+Use Composition rather than Inheritance.
+
+Props and composition give you all the flexibility you need to customize a component’s look and behavior in an explicit and safe way. 
+
+```js
+function FancyBorder(props) {
+  return (
+    <div className={'FancyBorder FancyBorder-' + props.color}>
+      {props.children}
+    </div>
+  );
+}
+function Dialog(props) {
+  return (
+    <FancyBorder color="blue">
+      <h1 className="Dialog-title">
+        {props.title}
+      </h1>
+      <p className="Dialog-message">
+        {props.message}
+      </p>
+      {props.children}
+    </FancyBorder>
+  );
+}
+
+class SignUpDialog extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSignUp = this.handleSignUp.bind(this);
+    this.state = {login: ''};
+  }
+
+  render() {
+    return (
+      <Dialog title="Mars Exploration Program"
+              message="How should we refer to you?">
+        <input value={this.state.login}
+               onChange={this.handleChange} />
+
+        <button onClick={this.handleSignUp}>
+          Sign Me Up!
+        </button>
+      </Dialog>
+    );
+  }
+
+  handleChange(e) {
+    this.setState({login: e.target.value});
+  }
+
+  handleSignUp() {
+    alert(`Welcome aboard, ${this.state.login}!`);
+  }
 }
 ```
