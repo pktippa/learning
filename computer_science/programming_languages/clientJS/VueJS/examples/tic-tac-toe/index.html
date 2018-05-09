@@ -1,0 +1,36 @@
+<html>
+  <head></head>
+  <title>Tic Tac Toe game in Vue.js</title>
+  <!-- Using the same CSS given by React tic-tac-toe game -->
+  <link href="../../../ReactJS/off_tutorial/tic-tac-toe/src/index.css"/>
+  <script src="../../js/vue.js"/>
+  <script type="text/javascript">
+    // Not working code
+    var ticTacToe = new Vue({
+      el: "#root"
+    })
+    Vue.component('game', {
+      props: ['']
+    });
+    Vue.component('board', {
+      props: ['squares']
+    });
+    Vue.component('square', {
+      props: [''],
+      template: `<button/>`
+    })
+  </script>
+  <body>
+    <div id="root">
+      <game class="game">
+        <board class="game-board">
+          <sqaure class="sqaure">
+
+          </sqaure>
+        </board>
+      </game>
+      </div>
+    </div>
+  </body>
+
+</html>

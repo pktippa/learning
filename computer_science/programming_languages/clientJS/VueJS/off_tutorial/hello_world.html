@@ -1,0 +1,144 @@
+<html>
+  <head></head>
+  <title>Vue Hello World</title>
+  <script src="../js/vue.js">//inculding the vue.js main file</script>
+  <body>
+    <div id='app'>
+      
+      {{ message }}
+
+    </div>
+    <div id='app-2'>
+      <span v-bind:title='message'>
+        Hover over this to see the loaded timestamp
+      </span>
+    </div>
+
+    <div id="app-3">
+      <span v-if="seen">Now you see me</span>
+    </div>
+
+    <div id="app-4">
+      <ol>
+        <li v-for="todo in todos">
+          {{ todo.text }}
+        </li>
+      </ol>
+    </div>
+
+    <div id="app-5">
+      <p>{{ message }}</p>
+      <button v-on:click="reverseMessage">Reverse Message</button>
+    </div>
+
+    <div id="app-6">
+      <p>{{ message }}</p>
+      <input v-model="message">
+    </div>
+
+
+    <div id="app-7">
+      <ol>
+        <!--
+          Now we provide each todo-item with the todo object
+          it's representing, so that its content can be dynamic.
+          We also need to provide each component with a "key",
+          which will be explained later.
+        -->
+        <todo-item
+          v-for="item in groceryList"
+          v-bind:todo="item"
+          v-bind:key="item.id">
+        </todo-item>
+      </ol>
+    </div>
+    <script type="text/javascript">
+      // For declarative rendering
+      // the el attribute id mapped to the div id above in body
+      // properties in `data` are only reactive if they existed
+      // when the instance was created.
+      var app = new Vue(
+        {
+          el: '#app',
+          data: {
+            message: 'Hello VueJS!!'
+          }
+        }
+      );
+      // this is called directive i.e for v-bind
+      var app2 = new Vue(
+        {
+          el: '#app-2',
+          data: {
+            message: 'Current Time stamp' + new Date().toLocaleString()
+          }
+        }
+      );
+
+      // conditional with if, and message is not default attribute, we can have other names like 'seen'
+      var app3 = new Vue(
+        {
+          el: '#app-3',
+          data: {
+            seen: true
+          }
+        }
+      );
+
+      var app4 = new Vue(
+        {
+          el: '#app-4',
+          data: {
+            todos: [
+              { text: 'Learn JavaScript' },
+              { text: 'Learn VueJS' },
+              { text: 'Lets build something good' }
+            ]
+          }
+        }
+      );
+
+      // Handling the User Input, see we have methods for event on user controls ex: button
+      var app5 = new Vue({
+        el: '#app-5',
+        data: {
+          message: 'Hello Vue.js'
+        },
+        methods: {
+          reverseMessage: function() {
+            this.message = this.message.split('').reverse().join('');
+          }
+        }
+      });
+
+      // Binding the user control input elements (text box) to display elements (a header/ paragraph)
+      // Try changing the value in text box, it will changed the binded <p> element value
+      var app6 = new Vue({
+        el: '#app-6',
+        data: {
+          message: 'hello world vue'
+        }
+      });
+
+      // Components
+      Vue.component('todo-item', {
+        // The todo-item component now accepts a
+        // "prop", which is like a custom attribute.
+        // This prop is called todo.
+        props: ['todo'],
+        template: '<li>{{ todo.text }}</li>'
+      });
+
+      var app7 = new Vue({
+        el: '#app-7',
+        data: {
+          groceryList: [
+            { id: 0, text: 'Vegetables' },
+            { id: 1, text: 'Cheese' },
+            { id: 2, text: 'Whatever else humans are supposed to eat' }
+          ]
+        }
+      }); 
+    </script>
+  </body>
+</html>
