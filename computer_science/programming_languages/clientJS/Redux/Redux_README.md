@@ -29,3 +29,7 @@ function reduceFunc(state) {
   return Object.assign({}, state, {lname: 'tippa'});
 }
 ```
+
+## Walk through example
+
+[Step by Step Guide](https://medium.com/@rajaraodv/step-by-step-guide-to-building-react-redux-apps-using-mocks-48ca0f47f9a)

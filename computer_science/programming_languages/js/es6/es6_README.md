@@ -40,4 +40,28 @@ var o = {a, b, c};
 
 console.log(o);
 // output {a:'foo', b: 42, c: {}}
-````
+```
+
+## Triple Dot - Spread notation
+
+Bot `App1` and `App2` are same.
+
+```js
+function App1() {
+  return <Greeting firstName="Ben" lastName="Hector" />;
+}
+
+function App2() {
+  const props = {firstName: 'Ben', lastName: 'Hector'};
+  return <Greeting {...props} />;
+}
+```
+
+For Creating new object
+
+```js
+var obj = {a: 1, b:2, c:4}
+// all properties get copied automatically 
+// and only selected properties can be changed
+var obj2 = {...obj, a:3}
+```
