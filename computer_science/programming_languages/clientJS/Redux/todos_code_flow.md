@@ -1,4 +1,17 @@
-* Container -> Component -> connect flow
+* Application start Container -> Component -> connect flow
+
+    react-redux/connect/connect.js
+
+    ```js
+    export function createConnect() {
+        return function connect(mapStateToProps, mapDispatchToProps, mergeProps) {
+    ```
+
+    ```js
+    var initMapStateToProps = match(mapStateToProps, mapStateToPropsFactories, 'mapStateToProps');
+    var initMapDispatchToProps = match(mapDispatchToProps, mapDispatchToPropsFactories, 'mapDispatchToProps');
+    var initMergeProps = match(mergeProps, mergePropsFactories, 'mergeProps');
+    ```
 
 * Page refresh flow
 
@@ -64,6 +77,99 @@
 
     VisibleTodoList has two functions are passed as parameters to connect (import { connect } from 'react-redux')
 
+    -----------------
+
+    In index.js
+
+
+    ```js
+    render(
+        <Provider store={store}>
+            <App />
+        </Provider>,
+        document.getElementById('root')
+    )
+    ```
+
+    react-dom/cjs/react-dom.development.js
+
+    ```js
+    render: function (element, container, callback) {
+        return legacyRenderSubtreeIntoContainer(null, element, container, false, callback);
+    }
+    ```
+
+    ```js
+    function legacyRenderSubtreeIntoContainer
+
+        DOMRenderer.unbatchedUpdates
+    }
+    ```
+
+    DOMRenderer.unbatchedUpdates is from base of
+
+    <REFER_HERE>
+    ```js
+    function unbatchedUpdates(fn, a) {
+    ```
+    - var ReactFiberScheduler = function (config) {
+        unbatchedUpdates: unbatchedUpdates
+    
+    - var ReactFiberReconciler$1 = function (config) {
+        _ReactFiberScheduler = ReactFiberScheduler(config)
+
+    - var ReactFiberReconciler$2 = Object.freeze({
+        default: ReactFiberReconciler$1
+    });
+
+    - var ReactFiberReconciler$3 = ( ReactFiberReconciler$2 && ReactFiberReconciler$1 ) || ReactFiberReconciler$2;
+
+    - var reactReconciler = ReactFiberReconciler$3['default'] ? ReactFiberReconciler$3['default'] : ReactFiberReconciler$3;
+
+    - var DOMRenderer = reactReconciler({
+
+    here the unbatchedUpdates attached
+
+    <REFER_HERE>
+    ```js
+    function unbatchedUpdates(fn, a) {
+        ...
+        return fn(a);
+    ```
+
+    ```js
+    DOMRenderer.unbatchedUpdates(function () {
+        ....
+        root.render(children, callback);
+    ```
+
+    ```js
+    ReactRoot.prototype.render = function (children, callback) {
+        ...
+        DOMRenderer.updateContainer(children, root, null, work._onCommit);
+    ```
+
+    ```js
+    updateContainer: function (element, container, parentComponent, callback) {
+        return updateContainerAtExpirationTime(element, container, parentComponent, currentTime, expirationTime, callback);
+    ```
+
+    ```js
+    function updateContainerAtExpirationTime(element, container, parentComponent, currentTime, expirationTime, callback) {
+        ...
+        return scheduleRootUpdate(current, element, currentTime, expirationTime, callback);
+    ```
+
+    ```js
+    function scheduleRootUpdate(current, element, currentTime, expirationTime, callback) {
+       scheduleWork(current, expirationTime); 
+    ```
+
+    And more can be seen in the call stack image
+    
+     ![imag](page_refresh_callstack.PNG)
+
+
 
 * Click on "Add todo" button flow
 
@@ -110,3 +216,19 @@
     via state we are updating the properties
 
     Now the control goes to FilterLink.js
+
+    ..... missing some doc in middle
+
+    Todo -> react-dom.development.js -> mountIndeterminateComponent func
+
+
+* Clicking on Filters. Clicked on Active
+
+    in FilterLink.js
+    ```js
+    onClick: () => dispatch(setVisibilityFilter(ownProps.filter))
+    ```
+
+    triggers dispatch function in redux/ex/createStore.js
+
+Dispatch (`dispatch()`) takes `action` as input, gets the `currentState` (first time its get populated with `INIT` action which makes sure all reducers return the default initial state )
