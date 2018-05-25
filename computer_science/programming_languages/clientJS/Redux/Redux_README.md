@@ -30,11 +30,12 @@ function reduceFunc(state) {
 }
 ```
 
-## Walk through example
+## Examples
 
 [Step by Step Guide](https://medium.com/@rajaraodv/step-by-step-guide-to-building-react-redux-apps-using-mocks-48ca0f47f9a)
 
-[Code Flow Doc](todos_code_flow.md)
+* [Todos](https://github.com/pktippa/react-redux-example-todos)
+* [Real World](https://github.com/pktippa/react-redux-example-real-world)
 
 ## Dispatch
 
