@@ -65,3 +65,9 @@ var obj = {a: 1, b:2, c:4}
 // and only selected properties can be changed
 var obj2 = {...obj, a:3}
 ```
+
+## Generators
+
+https://medium.com/@hidace/javascript-es6-generators-part-i-understanding-generators-93dea22bf1b
+
+[Script](generators.js)
