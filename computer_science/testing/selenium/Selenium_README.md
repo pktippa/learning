@@ -2,6 +2,7 @@
 
 ## Required Java Knowledge
 
+* Variables - 
 * Oops Concepts
     * Class, Object, Inheritance, Polymorphism, Encapsulation, Absraction
 * Interfaces
@@ -15,5 +16,5 @@
 * Packages
 * Functions - passing params and return values
 
-Start with Data Types
-
+* Started with Data Types
+* [Operators](../../programming_languages/Java/Operators.md)
