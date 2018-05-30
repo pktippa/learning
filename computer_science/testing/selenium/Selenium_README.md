@@ -2,6 +2,7 @@
 
 ## Required Java Knowledge
 
+* [Data types](../../programming_langues/Java/data_types.md)
 * Variables - 
 * Oops Concepts
     * Class, Object, Inheritance, Polymorphism, Encapsulation, Absraction
