@@ -38,3 +38,19 @@ h11
 Since h1 already came first in race, we dont have to consider it for next race we have to fill the second and third positions. So we take h2, h3, h6, h7, h11 - these 5 horses and conduct the 7th race and get the first two positions. These two position horses stand as 2nd and 3rd positions (h1 being at first position.)
 
 So we need minimum of 7 races to find the first 3 fastest horses.
+
+
+
+Q: There is a room with a door (closed) and three light bulbs. Outside the room there are three switches, connected to the bulbs. You may manipulate the switches as you wish, but once you open the door you can’t change them. Identify each switch with its bulb.
+
+A: We have to understand that light enery is dissipated in form of illuminated and heat energy. Here we have to leverage the heat energy also.
+
+Let the bulbs be X, Y and Z
+
+Turn on switch X for 5 to 10 minutes. Turn it off and turn on switch Y. Open the door and touch the light bulb.
+
+* if the light is on, it is Y
+* if the light is off and hot, it is X
+* if the light is off and cold, it is Z
+
+Similar Question of 3 switches with one bulb, finding out the correct switch for single bulb.
