@@ -23,3 +23,4 @@ const person1 = {
 console.log(fullname_withArgs.apply(person1, ['Hyderabad', 'India']));
 // Prints 'Tippa Kumar is from Hyderabad, India'
 
+// TODO: .apply with undefined. .apply(undefined, obj)

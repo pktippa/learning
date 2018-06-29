@@ -18,6 +18,10 @@ const ADD_TODO = 'ADD_TODO';
 
 ## Reducer
 
+To tie state and actions together, we write a function called a reducer
+
+Smaller reducer functions managing parts of the state.
+
 The reducer is a pure function that takes the previous state and an action, and returns the next state.
 
 InitialState is reducer call will be `undefined`. So have a initial state object state to return from the reducer
@@ -38,6 +42,8 @@ function reduceFunc(state) {
 * [Real World](https://github.com/pktippa/react-redux-example-real-world)
 
 ## Dispatch
+
+To change something in the state, you need to `dispatch` an `action`
 
 Dispatch (`dispatch()`) takes `action` as input, gets the `currentState` (first time its get populated with `INIT` action which makes sure all reducers return the default initial state ), gets the `currentReducer` -> `combination()` from the reducers combined at the application startup, 
 

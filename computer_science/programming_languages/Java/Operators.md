@@ -7,17 +7,20 @@
 
 ## Arithmetic Operators
 
+Same data type as the variables it operated on.
 ```
-+ Add
++ Add a + b
 - Subtract
 * Multiply
 / Division
 % Modulus
-++ Increment
+++ Increment a++
 -- Decrement
 ```
 
 ## Relational Operators
+
+Returns a boolean value
 
 ```
 == Equal to
@@ -36,6 +39,17 @@ Assume if a = 60 and b = 13; now in binary format they will be as follows −
 
 a = 0011 1100
 b = 0000 1101
+
+a =1
+
+a= -2
+0001
+
+1101 1010
+ << 2
+
+01 1010 00
+Returns same data type
 ```
 & - bitwise and - a&b
 | - bitwise or - a|b
@@ -46,6 +60,21 @@ b = 0000 1101
 >>> - zero fill right shift - a >>> 2 -> 00 0011 11
 
 For difference between >> and >>>, see -2 >> 1, -2 >>> 1
+```
+
+```java
+int a = -2;
+		int b = 2;
+		
+		System.out.println(Integer.toBinaryString(-2));
+		// Signed
+		System.out.println(Integer.toBinaryString(a >> 2));
+		// zero filled
+		System.out.println(Integer.toBinaryString(a >>> 2));
+		
+		System.out.println(Integer.toBinaryString(b));
+		System.out.println(Integer.toBinaryString(b >> 1));
+		System.out.println(Integer.toBinaryString(b >>> 1));
 ```
 
 ## Logical Operators
@@ -74,6 +103,17 @@ Assume Boolean variables A holds true and variable B holds false
 <<=
 ```
 
+byte a = 5;
+a += 2; // a = a + 2;
+// value of a ? = 7
+
+// a ?
+a -= 4;
+// value of a 3
+
+a >>= 2;
+// a = a >> 2;
+
 ## Misc Operators
 
 Conditional Operator ( ? : )
@@ -88,6 +128,6 @@ instanceof Operator (Need to understand classes)
 ( Object reference variable ) instanceof  (class/interface type)
 ```
 
-## Operator Precendence
+## Operator Precedence
 
 Read by own.
