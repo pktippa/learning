@@ -6,3 +6,5 @@
 * [Programming Languages](programming_languages/PL.md)
 * [Frameworks](frameworks\frameworks.md)
 * [Others Important](others.md)
+* [Tools like Maven](tools/README.md)
+* [OLAP](data-intelligence/olap.md)
