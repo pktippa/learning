@@ -5,6 +5,7 @@ All Learning Documentation
 * [Computer Science](computer_science\README.md)
 * [Linguistics](linguistics\README.md)
 * [Statistics](statistics\README.md)
+* [Datasets](datasets\README.md)
 
 ## Spoken Languages
 
