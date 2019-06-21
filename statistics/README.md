@@ -2,11 +2,12 @@
 
 ## Mean (mu)
 
-Mean is "Average" value of the data. i.e add up all the values in the data set and then divide by the number of values that we added
+Mean is "Average" value of the data. i.e add up all the values in the data set and then divide
+ by the number of values that we added
 
 ## Variance (sigma square)
 
-How much the numbers are spread out and how fare are they from mean
+How much the numbers are spread out and how far are they from mean.
 
 ## Standard Deviation (sigma)
 

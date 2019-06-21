@@ -1,0 +1,3 @@
+[submodule "ml-docs"]
+	path = ml-docs
+	url = git@github.com:pktippa/ml-docs.git
