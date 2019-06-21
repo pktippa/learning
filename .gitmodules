@@ -7,3 +7,6 @@
 [submodule "ai-training"]
 	path = ai-training
 	url = git@github.com:pktippa/ai-training.git
+[submodule "software-development"]
+	path = software-development
+	url = git@github.com:pktippa/software-development.git
