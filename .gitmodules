@@ -1,3 +1,6 @@
 [submodule "ml-docs"]
 	path = ml-docs
 	url = git@github.com:pktippa/ml-docs.git
+[submodule "ml-blog"]
+	path = ml-blog
+	url = git@github.com:pktippa/ml-blog.git
