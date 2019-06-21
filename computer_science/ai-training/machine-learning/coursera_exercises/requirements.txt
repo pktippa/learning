@@ -1,0 +1,5 @@
+numpy==1.14.5
+pandas==0.23.1
+matplotlib==2.2.2
+pylint==1.9.2
+jupyter==1.0.0

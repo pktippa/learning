@@ -4,6 +4,3 @@
 [submodule "ml-blog"]
 	path = ml-blog
 	url = git@github.com:pktippa/ml-blog.git
-[submodule "ai-training"]
-	path = ai-training
-	url = git@github.com:pktippa/ai-training.git
