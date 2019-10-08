@@ -1,0 +1,3 @@
+# TypeScript help docs
+
+* Casting
