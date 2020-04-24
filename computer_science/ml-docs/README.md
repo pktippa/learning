@@ -16,28 +16,32 @@ Data value types:
 
 1. Categorical values
 
-* [Natural Lanugage Processing](nlp/README.md)
+- [Natural Lanugage Processing](nlp/README.md)
 
 ## Neural Networks
 
-* [Neural Networks](neural_networks/README.md)
+- [Neural Networks](neural_networks/README.md)
 
 ## Statistics
 
-* [Statistics](statistics/README.md)
+- [Statistics](statistics/README.md)
 
 ## Matplotlib
 
-* [MatplotLib](matplotlib/README.md)
+- [MatplotLib](matplotlib/README.md)
 
 ## Cost / Error
 
-* [Cost or Error](cost_or_error/README.md)
+- [Cost or Error](cost_or_error/README.md)
+
+## Loss functions
+
+- [Loss Functions](loss-functions/README.md)
 
 ## Problem solving Steps
 
-* [Solving Steps](steps.md)
+- [Solving Steps](steps.md)
 
 ## Others
 
-* Softmax function which converts classified labels scores into probabilities. Softmax Function S(yi) = exp(yi) / Sigsum(exp(yi))
+- Softmax function which converts classified labels scores into probabilities. Softmax Function S(yi) = exp(yi) / Sigsum(exp(yi))
