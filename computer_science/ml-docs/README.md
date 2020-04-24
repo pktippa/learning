@@ -45,3 +45,7 @@ Data value types:
 ## Others
 
 - Softmax function which converts classified labels scores into probabilities. Softmax Function S(yi) = exp(yi) / Sigsum(exp(yi))
+
+## Sparsity in Convolutional neural networks:
+
+The representations downstream start highlighting what the network pays attention to, and they show fewer and fewer features being "activated"; most are set to zero. This is called "sparsity." Representation sparsity is a key feature of deep learning.
