@@ -185,6 +185,67 @@ let's say if we move the paragraph `p` bottom by `200px` it will move the conten
 
 ![Relative position](./static/relative_position.gif)
 
+Note: Using the top offset moved the HTML element downwards. Likewise, using a left offset moves an item to the right.
+
+### Absolute Position
+
+The next option for the CSS `position` property is `absolute`, which locks the element in place relative to its parent container. Unlike the relative position, this removes the element from the normal flow of the document, so surrounding items ignore it. Offset positions are same as relative position.
+
+One nuance with absolute positioning is that it will be locked relative to its closest positioned ancestor. If you forget to add a position rule to the parent item, (this is typically done using `position: relative;`), the browser will keep looking up the chain and ultimately default to the `body` tag.
+
+### Fixed position: Lock an Element to the Browser Window with Fixed Positioning
+
+The next layout scheme that CSS offers is the `fixed` position, which is a type of `absolute` positioning that locks an element relative to the `browser window`. Similar to `absolute` positioning, it's used with the CSS offset properties and also removes the element from the normal flow of the document. Other items no longer `"realize"` where it is positioned, which may require some layout adjustments elsewhere.
+
+One key difference between the `fixed` and `absolute` positions is that an element with a `fixed` position won't move when the user scrolls.
+
+### Float property: Push Elements Left or Right with the float Property
+
+The next positioning tool does not actually use position, but sets the `float` property of an element. Floating elements are removed from the normal flow of a document and pushed to either the `left` or `right` of their containing parent element. It's commonly used with the `width` property to specify how much horizontal space the floated element requires.
+
+### Change the Position of Overlapping Elements with the z-index Property
+
+z-index as think as Z axis in coordinate system.
+When elements are positioned to `overlap` (i.e. using `position`: `absolute` | `relative` | `fixed` | `sticky`), the element coming later in the HTML markup will, by default, appear on the top of the other elements. However, the `z-index` property can specify the order of how elements are `stacked on top of one another`. It must be an integer (i.e. a whole number and not a decimal), and higher values for the z-index property of an element move it higher in the stack than those with lower values.
+
+### Center an Element Horizontally Using the margin Property
+
+Another positioning technique is to center a block element horizontally. One way to do this is to set its `margin` to a value of auto.
+
+This method works for images, too. Images are `inline elements` by default, but can be changed to `block elements` when you set the `display` property to `block`.
+
+### Learn about Complementary Colors
+
+Color theory and its impact on design is a deep topic and only the basics are covered in the following challenges. On a website, color can draw attention to content, evoke emotions, or create `visual harmony`. Using different combinations of colors can really change the look of a website, and `a lot of thought` can go into picking a color palette that works with your content.
+
+The `color wheel` is a useful tool to visualize how colors relate to each other - it's a circle where similar hues are neighbors and different hues are farther apart. When two colors are opposite each other on the wheel, they are called `complementary colors`. They have the characteristic that if they are combined, they "cancel" each other out and create a `gray color`. However, when placed `side-by-side`, these `colors appear more vibrant` and produce a strong visual contrast.
+
+Some examples of complementary colors with their hex codes are:
+
+```
+red (#FF0000) and cyan (#00FFFF)
+green (#00FF00) and magenta (#FF00FF)
+blue (#0000FF) and yellow (#FFFF00)
+```
+
+This is different than the outdated RYB color model that many of us were taught in school, which has different primary and complementary colors. Modern color theory uses the additive `RGB` model (like on a computer screen) and the subtractive CMY(K) model (like in printing). Read [here](https://en.wikipedia.org/wiki/Color_model) for more information on this complex subject.
+
+There are many color picking tools available online that have an option to find the complement of a color.
+
+Note: For all color challenges: Using color can be a powerful way to add visual interest to a page. However, color alone should not be used as the only way to convey important information because users with visual impairments may not understand that content. This issue will be covered in more detail in the Applied Accessibility challenges.
+
+### Learn about Tertiary ColorsPassed
+
+Computer monitors and device screens create different colors by combining amounts of red, green, and blue light. This is known as the `RGB additive color model` in modern color theory. Red (R), green (G), and blue (B) are called primary colors. Mixing two primary colors creates the `secondary colors` cyan (G + B), magenta (R + B) and yellow (R + G). You saw these colors in the `Complementary Colors` challenge. These `secondary colors` happen to be the `complement` to the `primary color` not used in their creation, and are opposite to that primary color on the color wheel. For example, magenta is made with red and blue, and is the complement to green.
+
+`Tertiary colors` are the result of combining a primary color with one of its `secondary color` neighbors. For example, within the RGB color model, red (primary) and yellow (secondary) make orange (tertiary). This adds six more colors to a simple color wheel for a total of twelve.
+
+There are various methods of selecting different colors that result in a harmonious combination in design. One example that can use `tertiary colors` is called the `split-complementary` color scheme. This scheme starts with a `base color`, then pairs it with the two colors that are adjacent to its complement. The three colors provide strong visual contrast in a design, but are more subtle than using two complementary colors.
+
+### Adjust the Color of Various Elements to Complementary Colors
+
+The Complementary Colors challenge showed that opposite colors on the color wheel can make each other appear more vibrant when placed side-by-side. However, the strong visual contrast can be jarring if it's overused on a website, and can sometimes make text harder to read if it's placed on a complementary-colored background. In practice, one of the colors is usually dominant and the complement is used to bring visual attention to certain content on the page.
+
 ### Other info
 
 - The font size of header tags (h1 through h6) should generally be larger than the font size of paragraph tags
