@@ -3,7 +3,23 @@
 ## Mean (mu)
 
 Mean is "Average" value of the data. i.e add up all the values in the data set and then divide
- by the number of values that we added
+by the number of values that we added.
+
+## Median
+
+Middle value of all the values, keeping the values in sorted order ascending. If the number of values are even number, then the median value is the average/ mean of two middle values.
+
+## Midrange
+
+The midrange value is the mean of highest and lowest values in the distribution.
+
+## Mode
+
+Mode is the most common value in the distribution. Ex: 75, 80, 100, 100, 100. Here 100 is the mode of the distribution.
+
+## Range of distribution
+
+Range is the difference between highest and lowest value in the distribution.
 
 ## Variance (sigma square)
 
