@@ -29,6 +29,10 @@ How much the numbers are spread out and how far are they from mean.
 
 Square root of `Variance`
 
+Watch below Youtube video for explanation
+
+[![Standard Deviation](https://img.youtube.com/vi/MRqtXL2WX2M/0.jpg)](https://www.youtube.com/watch?v=MRqtXL2WX2M)
+
 ## Gaussian or Normal Distribution
 
 In a continuous graph, data can be spread out in different ways. Either it can spread to left, or to left or jumbled up.
