@@ -277,6 +277,42 @@ Here are a few examples of using `hsl()` with `fully-saturated`, `normal lightne
 
 The `hsl()` option in CSS also makes it easy to adjust the `tone` of a color. Mixing `white` with a `pure hue` creates a `tint` of that color, and `adding black` will make a `shade`. Alternatively, a `tone` is produced by adding `gray` or by both tinting and shading. Recall that the `'s'` and `'l'` of hsl() stand for `saturation` and `lightness`, respectively. The `saturation` percent `changes` the `amount of gray` and the `lightness` percent `determines how much white or black` is in the color. This is useful when you have a `base hue` you like, but need different variations of it.
 
+### Create a Gradual CSS Linear Gradient
+
+Applying a color on HTML elements is not limited to one flat hue. CSS provides the ability to use `color transitions`, otherwise known as `gradients`, on elements. This is accessed through the `background` property's `linear-gradient()` function. Here is the general syntax:
+
+`background: linear-gradient(gradient_direction, color 1, color 2, color 3, ...);`
+
+The first argument specifies the `direction` from which color transition starts - it can be stated as a degree, where `90deg` makes a vertical gradient and `45deg` is angled like a backslash. The following arguments specify the order of colors used in the gradient.
+
+### Use a CSS Linear Gradient to Create a Striped Element
+
+The `repeating-linear-gradient()` function is very similar to `linear-gradient()` with the major difference that it repeats the specified gradient pattern. `repeating-linear-gradient()` accepts a variety of values, but for simplicity, you'll work with an `angle value` and `color stop` values in this challenge.
+
+The `angle value` is the `direction` of the gradient. `Color stops` are like `width` values that mark where a `transition` takes place, and are given with a `percentage` or `a number of pixels`.
+
+it helps to think about the color stops as pairs where every two colors blend together.
+
+0px [yellow -- blend -- blue] 40px [green -- blend -- red] 80px
+
+If every two color stop values are the same color, the blending isn't noticeable because it's between the same color, followed by a hard transition to the next color, so you end up with stripes.
+
+### Creeate Texture by Adding a Subtle Pattern as a Background Imag
+
+One way to add `texture` and `interest` to a background and have it stand out more is to add a `subtle pattern`. The key is `balance`, as you don't want the background to stand out too much, and take away from the foreground. The background property supports the `url()` function in order to link to an image of the chosen texture or pattern. The link address is wrapped in quotes inside the parentheses.
+
+`url()`
+
+### Use the CSS Transform scale Property to Change the Size of an Element
+
+To change the scale of an element, CSS has the transform property, along with its `scale()` function. The following code example doubles the size of all the paragraph elements on the page:
+
+```css
+p {
+  transform: scale(2);
+}
+```
+
 ### Other info
 
 - The font size of header tags (h1 through h6) should generally be larger than the font size of paragraph tags
